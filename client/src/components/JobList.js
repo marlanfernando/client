@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 
 function JobItem({ job }) {
+  console.log("JOB " + JSON.stringify(job));
   const title = job.company ? `${job.title} at ${job.company.name}` : job.title;
+  console.log("TITLE : " + title);
   return (
     <li className="media">
       <div className="media-content">
@@ -14,6 +16,7 @@ function JobItem({ job }) {
 }
 
 function JobList({ jobs }) {
+  console.log(JSON.stringify(jobs));
   return (
     <ul className="box">
       {jobs.map((job) => (
